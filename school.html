@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About My School</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      color: #fff;
+      background: url("images/space.jpg") no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+    }
+
+    .overlay {
+      background-color: rgba(0,0,0,0.3);
+      padding: 70px 20px 50px; /* extra top padding for logos */
+      min-height: 100vh;
+      text-align: center;
+    }
+
+    h1 { 
+      font-size: 3em; 
+      margin-bottom: 20px; 
+      text-shadow: 2px 2px 5px #000; 
+    }
+    p { 
+      font-size: 1.3em; 
+      margin-bottom: 15px; 
+    }
+
+    /* Bigger School Photo */
+    img.school-photo {
+      width: 600px;
+      max-width: 95%;
+      border-radius: 15px;
+      margin: 20px 0;
+      border: 3px solid #fff;
+      box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    }
+
+    /* Logo Styles */
+    .logo {
+      position: fixed;
+      top: 15px;
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: #fff;
+      padding: 5px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.4);
+      z-index: 1100;
+    }
+    .logo.left { left: 20px; }
+    .logo.right { right: 20px; }
+
+    /* Back to Home Button */
+    .back-home {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: #007bff;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: 0.3s;
+      z-index: 1000;
+    }
+    .back-home:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <!-- Logos -->
+  <img src="images/government-logo.png" alt="Government Logo" class="logo left">
+  <img src="images/school-logo.png" alt="School Logo" class="logo right">
+
+  <div class="overlay">
+    <h1>About My School</h1>
+    <img src="images/school-building.jpg" alt="School Photo" class="school-photo">
+
+    <p><strong>School Name:</strong> Example High School</p>
+    <p><strong>Location:</strong> Dhaka, Bangladesh</p>
+    <p><strong>Founded:</strong> 1995</p>
+    <p><strong>Facilities:</strong> Science Lab, Computer Lab, Library, Sports Ground</p>
+    <p><strong>Motto:</strong> "Knowledge is Power"</p>
+  </div>
+
+  <!-- Back Button -->
+  <a href="index.html" class="back-home">⬅ Back to Home</a>
+</body>
+</html>
