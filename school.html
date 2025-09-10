@@ -2,67 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>About My School</title>
+  <title>My School</title>
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Poppins', Arial, sans-serif;
       color: #fff;
       background: url("images/space.jpg") no-repeat center center fixed;
       background-size: cover;
       min-height: 100vh;
+      overflow-x: hidden;
     }
 
+    /* Logos */
+    .logo-left, .logo-right {
+      position: fixed;
+      top: 20px;
+      width: 80px;
+      height: auto;
+      z-index: 1000;
+      filter: brightness(1.5);
+    }
+    .logo-left { left: 20px; }
+    .logo-right { right: 20px; }
+
+    /* Overlay */
     .overlay {
-      background-color: rgba(0,0,0,0.3);
-      padding: 70px 20px 50px; /* extra top padding for logos */
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 50px 20px;
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 3000px;
+      margin: 0 auto;
+    }
+
+    /* School Photo (22% bigger than original profile photo) */
+    .school-photo {
+      width: 244px; /* 200px + 22% */
+      height: auto;
+      max-height: 427px; /* 350px + 22% */
+      border-radius: 15px;
+      object-fit: cover;
+      border: 3px solid #fff;
+      margin-bottom: 25px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    }
+
+    /* Headings */
+    h1 { font-weight: 700; font-size: clamp(2em, 3vw, 3.5em); margin-bottom: 15px; text-align: center; text-shadow: 2px 2px 5px #000; }
+    h2 { font-weight: 600; font-size: clamp(1.5em, 2.5vw, 2.5em); margin: 30px 0 15px; text-align: center; text-shadow: 1px 1px 3px #000; }
+    p { font-weight: 300; margin: 8px 0; font-size: clamp(1em, 1.5vw, 1.2em); text-align: center; }
+
+    /* Tables */
+    table {
+      width: 90%;
+      max-width: 900px;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      font-size: clamp(0.9em, 1vw, 1.1em);
+    }
+
+    th, td {
+      border: 1px solid rgba(255,255,255,0.7);
+      padding: 12px 25px;
       text-align: center;
     }
 
-    h1 { 
-      font-size: 3em; 
-      margin-bottom: 20px; 
-      text-shadow: 2px 2px 5px #000; 
-    }
-    p { 
-      font-size: 1.3em; 
-      margin-bottom: 15px; 
+    th {
+      background-color: rgba(0, 0, 0, 0.7);
+      font-weight: 600;
     }
 
-    /* Bigger School Photo */
-    img.school-photo {
-      width: 600px;
-      max-width: 95%;
-      border-radius: 15px;
-      margin: 20px 0;
-      border: 3px solid #fff;
-      box-shadow: 0 0 15px rgba(0,0,0,0.6);
-    }
-
-    /* Logo Styles */
-    .logo {
-      position: fixed;
-      top: 15px;
-      width: 60px;
-      height: 60px;
-      object-fit: contain;
-      border-radius: 50%;
-      background: #fff;
-      padding: 5px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.4);
-      z-index: 1100;
-    }
-    .logo.left { left: 20px; }
-    .logo.right { right: 20px; }
-
-    /* Back to Home Button */
+    /* Back Button */
     .back-home {
       position: fixed;
       bottom: 20px;
       left: 20px;
-      background: #007bff;
+      background: #28a745;
       color: #fff;
       padding: 12px 25px;
       border-radius: 8px;
@@ -73,27 +101,67 @@
       z-index: 1000;
     }
     .back-home:hover {
-      background: #0056b3;
+      background: #1e7e34;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .overlay { padding: 40px 15px; }
+      .school-photo { width: 220px; max-height: 385px; margin-bottom: 20px; }
+      th, td { padding: 10px 15px; }
+    }
+
+    @media (max-width: 768px) {
+      .logo-left, .logo-right { width: 60px; top: 15px; }
+      .school-photo { width: 146px; max-height: 254px; margin-bottom: 15px; }
+      th, td { padding: 8px 12px; }
+    }
+
+    @media (max-width: 480px) {
+      .overlay { padding: 25px 10px; }
+      h1 { font-size: clamp(1.5em, 5vw, 2.5em); }
+      h2, p { font-size: clamp(1em, 3vw, 1.2em); }
+      table { width: 100%; font-size: clamp(0.8em, 3vw, 1em); }
+      .school-photo { width: 120px; max-height: 210px; }
     }
   </style>
 </head>
 <body>
   <!-- Logos -->
-  <img src="images/government-logo.png" alt="Government Logo" class="logo left">
-  <img src="images/school-logo.png" alt="School Logo" class="logo right">
+  <img src="images/government-logo.png" alt="Government Logo" class="logo-left">
+  <img src="images/school-logo.png" alt="School Logo" class="logo-right">
 
   <div class="overlay">
     <h1>About My School</h1>
-    <img src="images/school-building.jpg" alt="School Photo" class="school-photo">
 
-    <p><strong>School Name:</strong> Example High School</p>
-    <p><strong>Location:</strong> Dhaka, Bangladesh</p>
-    <p><strong>Founded:</strong> 1995</p>
-    <p><strong>Facilities:</strong> Science Lab, Computer Lab, Library, Sports Ground</p>
-    <p><strong>Motto:</strong> "Knowledge is Power"</p>
+    <!-- School Photo -->
+    <img src="images/school-photo.jpg" alt="School Photo" class="school-photo">
+
+    <h2>School Information</h2>
+    <p>School Name: Example High School</p>
+    <p>Location: Dhaka, Bangladesh</p>
+    <p>Founded: 1990</p>
+
+    <h2>Achievements</h2>
+    <table>
+      <tr><th>Year</th><th>Achievement</th></tr>
+      <tr><td>2020</td><td>Best Science Fair Project</td></tr>
+      <tr><td>2022</td><td>Champion in Debate Competition</td></tr>
+      <tr><td>2024</td><td>Ranked Top 10 in National Exam</td></tr>
+    </table>
+
+    <h2>Facilities</h2>
+    <table>
+      <tr><th>Facility</th><th>Description</th></tr>
+      <tr><td>Library</td><td>Thousands of books for all classes</td></tr>
+      <tr><td>Computer Lab</td><td>Modern lab with internet access</td></tr>
+      <tr><td>Sports Ground</td><td>Football, cricket, and athletics</td></tr>
+    </table>
+
+    <p>© 2025 M R Jidan</p>
   </div>
 
-  <!-- Back Button -->
-  <a href="index.html" class="back-home">⬅ Back to Home</a>
-</body>
+  <!-- Back to Home Button -->
+  <a href="index.html" class="back-home">⬅ Back to Homepage</a>
+</body> 
 </html>
