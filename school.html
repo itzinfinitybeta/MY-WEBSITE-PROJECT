@@ -42,11 +42,11 @@
       margin: 0 auto;
     }
 
-    /* School Photo */
+    /* School Photo (increased 60%) */
     .school-photo {
-      width: 244px;
+      width: 390px;  /* was 244px */
       height: auto;
-      max-height: 427px;
+      max-height: 683px; /* was 427px */
       border-radius: 15px;
       object-fit: cover;
       border: 3px solid #fff;
@@ -61,8 +61,8 @@
 
     /* Tables */
     table {
-      width: 90%;
-      max-width: 900px;
+      width: 95%;
+      max-width: 1100px;
       margin: 20px auto;
       border-collapse: collapse;
       background-color: rgba(255, 255, 255, 0.1);
@@ -73,7 +73,7 @@
 
     th, td {
       border: 1px solid rgba(255,255,255,0.7);
-      padding: 12px 25px;
+      padding: 10px 15px;
       text-align: center;
     }
 
@@ -98,27 +98,6 @@
       z-index: 1000;
     }
     .back-home:hover { background: #1e7e34; }
-
-    /* Responsive */
-    @media (max-width: 1024px) {
-      .overlay { padding: 40px 15px; }
-      .school-photo { width: 220px; max-height: 385px; margin-bottom: 20px; }
-      th, td { padding: 10px 15px; }
-    }
-
-    @media (max-width: 768px) {
-      .logo-left, .logo-right { width: 60px; top: 15px; }
-      .school-photo { width: 146px; max-height: 254px; margin-bottom: 15px; }
-      th, td { padding: 8px 12px; }
-    }
-
-    @media (max-width: 480px) {
-      .overlay { padding: 25px 10px; }
-      h1 { font-size: clamp(1.5em, 5vw, 2.5em); }
-      h2, p { font-size: clamp(1em, 3vw, 1.2em); }
-      table { width: 100%; font-size: clamp(0.8em, 3vw, 1em); }
-      .school-photo { width: 120px; max-height: 210px; }
-    }
   </style>
 </head>
 <body>
@@ -133,30 +112,35 @@
     <img src="images/school-photo.jpg" alt="School Photo" class="school-photo">
 
     <h2>School Information</h2>
-    <p><strong>School Name:</strong> Bheramara Pilot High School</p>
-    <p><strong>EIIN:</strong> 117760</p>
-    <p><strong>Location:</strong> Bheramara, Kushtia, Bangladesh</p>
-    <p><strong>Established:</strong> 1942</p>
-    <p><strong>School Type:</strong> Secondary, Non-Government</p>
-    <p><strong>Headteacher:</strong> Md. Abdullah Al Mamun</p>
-    <p><strong>Total Students:</strong> 1,680+</p>
-    <p><strong>Total Teachers:</strong> 39</p>
+    <p><strong>School Name:</strong> Amtali Govt. Technical School and College</p>
+    <p><strong>Location:</strong> Amtali, Barguna, Bangladesh</p>
+    <p><strong>School Type:</strong> Government Technical School & College</p>
+    <p><strong>Total Students:</strong> 650+</p>
+    <p><strong>Total Teachers:</strong> 20+</p>
 
-    <h2>Achievements</h2>
+    <h2>Teacher List</h2>
     <table>
-      <tr><th>Year</th><th>Achievement</th></tr>
-      <tr><td>2019</td><td>Regional Sports Champion</td></tr>
-      <tr><td>2021</td><td>Best SSC Results in Kushtia District</td></tr>
-      <tr><td>2023</td><td>Champion in National Debate Competition</td></tr>
-    </table>
-
-    <h2>Facilities</h2>
-    <table>
-      <tr><th>Facility</th><th>Description</th></tr>
-      <tr><td>Library</td><td>5,000+ books, digital access</td></tr>
-      <tr><td>Computer Lab</td><td>Modern ICT lab with internet</td></tr>
-      <tr><td>Science Lab</td><td>Physics, Chemistry & Biology labs</td></tr>
-      <tr><td>Sports Ground</td><td>Football, cricket, athletics & basketball</td></tr>
+      <tr><th>#</th><th>Name</th><th>Designation</th><th>Email</th></tr>
+      <tr><td>1</td><td>Md. Helal Uddin Khan</td><td>Principal</td><td>shikholasinstc2021@gmail.com</td></tr>
+      <tr><td>2</td><td>Cumranur Fahim</td><td>Instructor (General)</td><td>farhunnaby2010@gmail.com</td></tr>
+      <tr><td>3</td><td>Md. Kamrul Islam</td><td>Instructor (Mathematics)</td><td>jisanudd210@gmail.com</td></tr>
+      <tr><td>4</td><td>Md. Obidul Haque</td><td>Instructor (General)</td><td>obidulhaque@gmail.com</td></tr>
+      <tr><td>5</td><td>Md. Akramul Alam</td><td>Instructor (IT Support & Networking)</td><td>alamcis1991@gmail.com</td></tr>
+      <tr><td>6</td><td>Md. Anamul Islam</td><td>Instructor (General)</td><td>md.anamul.islam.1447@gmail.com</td></tr>
+      <tr><td>7</td><td>Md. Nazmul Hasan</td><td>Instructor (IT Support & Networking)</td><td>nazmulcst@gmail.com</td></tr>
+      <tr><td>8</td><td>Md. Shohan Kabir</td><td>Instructor (General)</td><td>shohankabir@gmail.com</td></tr>
+      <tr><td>9</td><td>Md. Omar Faruk</td><td>Instructor (Automobile)</td><td>omarfbd@gmail.com</td></tr>
+      <tr><td>10</td><td>Md. Teja Ahmed</td><td>Junior Instructor</td><td>mdtejaahmed259@gmail.com</td></tr>
+      <tr><td>11</td><td>Md. Hanif Sarder</td><td>Junior Instructor</td><td>mdhanifsarder1986@gmail.com</td></tr>
+      <tr><td>12</td><td>Md. Jasim Uddin</td><td>Junior Instructor</td><td>jasim3343@gmail.com</td></tr>
+      <tr><td>13</td><td>Md. Sohel Rana</td><td>Junior Instructor</td><td>soheljs87@gmail.com</td></tr>
+      <tr><td>14</td><td>Palash Chandra</td><td>Junior Instructor</td><td>palashmalakar.insti@gmail.com</td></tr>
+      <tr><td>15</td><td>Md. Habibur Rahman</td><td>Junior Instructor</td><td>habib123666@gmail.com</td></tr>
+      <tr><td>16</td><td>Abdul Hanei</td><td>Junior Instructor</td><td>abdulhanei119@gmail.com</td></tr>
+      <tr><td>17</td><td>Syful Islam</td><td>Instructor (Apparel & Manufacturing)</td><td>mdsyfulstc@gmail.com</td></tr>
+      <tr><td>18</td><td>Fazlul Karim</td><td>Junior Instructor</td><td>fazlulstc@gmail.com</td></tr>
+      <tr><td>19</td><td>Md. Sakib Muniruzzaman</td><td>Junior Instructor</td><td>sakib@gmail.com</td></tr>
+      <tr><td>20</td><td>Nayem Chandro Malakar</td><td>Junior Instructor</td><td>nayemcstc@gmail.com</td></tr>
     </table>
 
     <p>© 2025 M R Jidan</p>
