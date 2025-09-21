@@ -1,0 +1,121 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      color: #fff;
+      background: url("images/space.jpg") no-repeat center center fixed;
+      background-size: cover;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Logos */
+    .logo-left, .logo-right {
+      position: fixed;
+      top: 20px;
+      width: 80px;
+      height: auto;
+      z-index: 1000;
+      filter: brightness(1.5);
+    }
+    .logo-left { left: 20px; }
+    .logo-right { right: 20px; }
+
+    /* Overlay */
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.3);
+      padding: 50px 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 3000px;
+      margin: 0 auto;
+    }
+
+    /* School Photo (increased 60%) */
+    .school-photo {
+      width: 390px;  /* was 244px */
+      height: auto;
+      max-height: 683px; /* was 427px */
+      border-radius: 15px;
+      object-fit: cover;
+      border: 3px solid #fff;
+      margin-bottom: 25px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    }
+
+    /* Headings */
+    h1 { font-weight: 700; font-size: clamp(2em, 3vw, 3.5em); margin-bottom: 15px; text-align: center; text-shadow: 2px 2px 5px #000; }
+    h2 { font-weight: 600; font-size: clamp(1.5em, 2.5vw, 2.5em); margin: 30px 0 15px; text-align: center; text-shadow: 1px 1px 3px #000; }
+    p { font-weight: 300; margin: 8px 0; font-size: clamp(1em, 1.5vw, 1.2em); text-align: center; }
+
+    /* Tables */
+    table {
+      width: 95%;
+      max-width: 1100px;
+      margin: 20px auto;
+      border-collapse: collapse;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      font-size: clamp(0.9em, 1vw, 1.1em);
+    }
+
+    th, td {
+      border: 1px solid rgba(255,255,255,0.7);
+      padding: 10px 15px;
+      text-align: center;
+    }
+
+    th {
+      background-color: rgba(0, 0, 0, 0.7);
+      font-weight: 600;
+    }
+
+    /* Back Button */
+    .back-home {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: #28a745;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: 0.3s;
+      z-index: 1000;
+    }
+    .back-home:hover { background: #1e7e34; }
+
+.bottom-menu {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: rgba(0,0,0,0.7);
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    z-index: 9999;
+  }
+
+  .bottom-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .bottom-menu a:hover {
+    color: #00e5ff;
+    transform: scale(1.1);
+  }
